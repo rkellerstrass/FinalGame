@@ -9,6 +9,8 @@ public class Jump : Physics2DObject
 	// the key used to activate the push
 	public KeyCode key = KeyCode.Space;
 
+
+
 	// strength of the push
 	public float jumpStrength = 10f;
 
@@ -22,12 +24,14 @@ public class Jump : Physics2DObject
 
 	private bool canJump = true;
 
-	// Read the input from the player
-	void Update()
+
+    // Read the input from the player
+    void Update()
 	{
 		if(canJump
 			&& Input.GetKeyDown(key))
 		{
+            gameObject.GetComponent<SoundManager>().SendMessage("PlayJumpSound");
 			// Apply an instantaneous upwards force
 			rigidbody2D.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
 			canJump = !checkGround;

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DeadlyRain.unity
     guid: a2d3b202cc1eb4714881db0e35808fd3
+  - enabled: 1
+    path: Assets/Main Title.unity
+    guid: c3f162708bca143ca9a1b28251726fe6
   m_configObjects: {}
